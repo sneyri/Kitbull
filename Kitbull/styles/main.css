@@ -1,0 +1,29 @@
+.main {
+    text-align: center;
+    position: relative;
+}
+
+.main__button {
+    width: 200px;
+    height: 50px;
+    border: none;
+
+    transition-duration: 200ms;
+}
+
+.main__par {
+    margin-top: 20px;
+    padding: 20px;
+    font-size: 25px;
+    text-align: left;
+    background-color: #00000078;
+}
+
+.main__button:hover {
+    background-color: rgb(144, 255, 127);
+    transform: scale(1.1);
+}
+.main__button:active {
+    transition-duration: 50ms;
+    transform: scale(0.9);
+}
