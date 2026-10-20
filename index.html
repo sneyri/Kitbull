@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Отзыв на короткометражный мультфильм Kitbull (Pixar SparkShorts) — историю дружбы котёнка и питбуля.">
+    <title>Kitbull — отзыв на мультфильм</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&family=Unbounded:wght@600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/root.css">
+</head>
+<body data-page="home">
+    <canvas id="particles" aria-hidden="true"></canvas>
+    <div class="progress" id="progress"></div>
+
+    <nav class="nav" id="nav">
+        <a class="nav__logo" href="index.html">Kit<span>bull</span></a>
+        <ul class="nav__list" id="navList">
+            <li><a href="index.html" class="is-active" aria-current="page">Главная</a></li>
+            <li><a href="about.html">О мультфильме</a></li>
+            <li><a href="characters.html">Герои</a></li>
+            <li><a href="review.html">Мой отзыв</a></li>
+            <li><a href="gallery.html">Кадры</a></li>
+        </ul>
+        <button class="nav__burger" id="burger" aria-label="Меню" aria-expanded="false" aria-controls="navList"><span></span><span></span></button>
+    </nav>
+
+    <header class="hero">
+        <div class="hero__text">
+            <span class="hero__tag">Pixar SparkShorts · 2019</span>
+            <h1 class="hero__title">Что такое <em>дружба?</em></h1>
+            <p class="hero__lead">
+                На этот вопрос без единого слова отвечает короткометражка Kitbull —
+                история бездомного котёнка и питбуля на цепи. Здесь — мой отзыв на него.
+            </p>
+            <div class="hero__actions">
+                <a class="btn btn--primary" href="review.html">Читать отзыв</a>
+                <a class="btn" href="about.html">О мультфильме</a>
+            </div>
+        </div>
+        <div class="hero__sphere"><canvas id="sphere" data-glyph="paw" aria-hidden="true"></canvas></div>
+        <span class="hero__scroll">Листай вниз</span>
+    </header>
+
+    <main class="sheet">
+        <div class="marquee" aria-hidden="true">
+            <div class="marquee__track">
+                <span>Kitbull</span><span>Дружба</span><span>Pixar</span><span>Котёнок</span><span>SparkShorts</span><span>Питбуль</span><span>2019</span><span>Душевно</span>
+                <span>Kitbull</span><span>Дружба</span><span>Pixar</span><span>Котёнок</span><span>SparkShorts</span><span>Питбуль</span><span>2019</span><span>Душевно</span>
+            </div>
+        </div>
+
+        <section class="section" id="intro">
+            <span class="section__label reveal">Моё впечатление</span>
+            <h2 class="section__title reveal">Тёплая история в мрачном дворе</h2>
+            <p class="quote reveal">Очень <em>душевный</em> и приятный мультфильм.</p>
+        </section>
+
+        <section class="section">
+            <span class="section__label reveal">Разделы сайта</span>
+            <div class="hub">
+                <a class="hub__item reveal" href="about.html">
+                    <span class="hub__num">01</span><span class="hub__arrow">↗</span>
+                    <div><h3 class="hub__title">О мультфильме</h3><p class="hub__text">Сюжет, создатели и факты.</p></div>
+                </a>
+                <a class="hub__item reveal" href="characters.html">
+                    <span class="hub__num">02</span><span class="hub__arrow">↗</span>
+                    <div><h3 class="hub__title">Герои</h3><p class="hub__text">Котёнок, питбуль и их двор.</p></div>
+                </a>
+                <a class="hub__item reveal" href="review.html">
+                    <span class="hub__num">03</span><span class="hub__arrow">↗</span>
+                    <div><h3 class="hub__title">Мой отзыв</h3><p class="hub__text">Моя оценка и впечатления.</p></div>
+                </a>
+                <a class="hub__item reveal" href="gallery.html">
+                    <span class="hub__num">04</span><span class="hub__arrow">↗</span>
+                    <div><h3 class="hub__title">Кадры</h3><p class="hub__text">Любимые моменты из фильма.</p></div>
+                </a>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="stats reveal">
+                <div class="stats__item"><span class="stats__num"><span data-count="10">0</span>/10</span><span class="stats__label">моя оценка</span></div>
+                <div class="stats__item"><span class="stats__num" data-count="2019">0</span><span class="stats__label">год выхода</span></div>
+                <div class="stats__item"><span class="stats__num">Pixar</span><span class="stats__label">студия, проект SparkShorts</span></div>
+                <div class="stats__item"><span class="stats__num"><span data-count="9">0</span> мин</span><span class="stats__label">длится мультфильм</span></div>
+            </div>
+        </section>
+
+        <section class="section">
+            <span class="section__label reveal">Понравилось?</span>
+            <h2 class="section__title reveal">Поставь лайк</h2>
+            <div class="hero__actions">
+                <button class="like" data-like aria-pressed="false">
+                    <span class="like__heart">♥</span> Мне тоже понравилось <span class="like__count" data-like-count>0</span>
+                </button>
+                <a class="btn btn--primary" href="review.html">Мой отзыв</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <svg class="kitten" id="kitten" viewBox="0 0 200 130" aria-hidden="true">
+            <path d="M18 130 C 14 70 40 40 100 40 C 160 40 186 70 182 130 Z" fill="#0c0c12" stroke="#4b4a68" stroke-width="2.5" stroke-linejoin="round"/>
+            <path d="M32 58 L 40 8 L 76 42 Z" fill="#0c0c12" stroke="#4b4a68" stroke-width="2.5" stroke-linejoin="round"/>
+            <path d="M168 58 L 160 8 L 124 42 Z" fill="#0c0c12" stroke="#4b4a68" stroke-width="2.5" stroke-linejoin="round"/>
+            <path d="M42 46 L 45 22 L 62 40 Z" fill="#c57a98"/>
+            <path d="M158 46 L 155 22 L 138 40 Z" fill="#c57a98"/>
+            <circle cx="68" cy="82" r="24" fill="#fff"/>
+            <circle cx="132" cy="82" r="24" fill="#fff"/>
+            <circle class="kitten__pupil" cx="68" cy="82" r="16" fill="#000"/>
+            <circle class="kitten__pupil" cx="132" cy="82" r="16" fill="#000"/>
+        </svg>
+        <div class="footer__grid">
+            <p class="footer__big">Дружба — это<br><span>когда рядом.</span></p>
+            <ul class="footer__links">
+                <li><a href="about.html">О мультфильме</a></li>
+                <li><a href="characters.html">Герои</a></li>
+                <li><a href="review.html">Мой отзыв</a></li>
+                <li><a href="gallery.html">Кадры</a></li>
+            </ul>
+        </div>
+        <p class="footer__copy">Сайт-отзыв на Kitbull · учебный проект</p>
+        <p class="footer__hint">Нажми в любом месте — появятся лапки 🐾</p>
+    </footer>
+
+    <script src="./script.js"></script>
+</body>
+</html>

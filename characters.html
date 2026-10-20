@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Герои мультфильма Kitbull: котёнок и питбуль.">
+    <title>Герои — Kitbull</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&family=Unbounded:wght@600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/root.css">
+</head>
+<body data-page="characters">
+    <canvas id="particles" aria-hidden="true"></canvas>
+    <div class="progress" id="progress"></div>
+
+    <nav class="nav" id="nav">
+        <a class="nav__logo" href="index.html">Kit<span>bull</span></a>
+        <ul class="nav__list" id="navList">
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="about.html">О мультфильме</a></li>
+            <li><a href="characters.html" class="is-active" aria-current="page">Герои</a></li>
+            <li><a href="review.html">Мой отзыв</a></li>
+            <li><a href="gallery.html">Кадры</a></li>
+        </ul>
+        <button class="nav__burger" id="burger" aria-label="Меню" aria-expanded="false" aria-controls="navList"><span></span><span></span></button>
+    </nav>
+
+    <header class="hero hero--small">
+        <div class="hero__text">
+            <span class="hero__tag">02 · Герои</span>
+            <h1 class="hero__title">Двое, которые <em>нашли друг друга</em></h1>
+            <p class="hero__lead">Маленький и большой. Свободный и прикованный. Совсем разные — и всё же похожие.</p>
+        </div>
+        <div class="hero__sphere"><canvas id="sphere" data-glyph="eye" aria-hidden="true"></canvas></div>
+    </header>
+
+    <main class="sheet">
+        <section class="section" id="heroes">
+            <span class="section__label reveal">Знакомьтесь</span>
+            <h2 class="section__title reveal">Главные герои</h2>
+            <div class="cards">
+                <article class="card reveal" tabindex="0">
+                    <div class="card__img card__img--cat" role="img" aria-label="Чёрный котёнок с большими глазами"></div>
+                    <h3 class="card__title">Котёнок</h3>
+                    <p class="card__text">Маленький, лохматый, с огромными глазами. Любопытный и очень самостоятельный, потому что вырос на улице.</p>
+                    <div class="chips"><span class="chip">Любопытный</span><span class="chip">Самостоятельный</span><span class="chip">Осторожный</span></div>
+                </article>
+                <article class="card reveal" tabindex="0">
+                    <div class="card__img card__img--dog" role="img" aria-label="Питбуль на цепи"></div>
+                    <h3 class="card__title">Питбуль</h3>
+                    <p class="card__text">Большой и грозный на вид, но очень добрый внутри. Живёт на цепи и совсем не знает, что такое ласка.</p>
+                    <div class="chips"><span class="chip">Добрый</span><span class="chip">Одинокий</span><span class="chip">Сильный</span></div>
+                </article>
+                <article class="card reveal" tabindex="0">
+                    <div class="card__img card__img--yard" role="img" aria-label="Мрачный двор"></div>
+                    <h3 class="card__title">Двор</h3>
+                    <p class="card__text">Серый, холодный и тесный. Он делает историю ещё теплее: на таком фоне каждый добрый жест замечаешь сильнее.</p>
+                    <div class="chips"><span class="chip">Мрачный</span><span class="chip">Настоящий</span></div>
+                </article>
+            </div>
+        </section>
+
+        <section class="section">
+            <span class="section__label reveal">Сравнение</span>
+            <h2 class="section__title reveal">Такие разные</h2>
+            <div class="compare reveal">
+                <div class="compare__row">
+                    <span class="compare__name">Свобода</span>
+                    <div class="compare__bars">
+                        <div class="compare__bar"><span>Котёнок</span><span class="bar"><i data-w="90"></i></span></div>
+                        <div class="compare__bar"><span>Питбуль</span><span class="bar bar--dog"><i data-w="12"></i></span></div>
+                    </div>
+                </div>
+                <div class="compare__row">
+                    <span class="compare__name">Сила</span>
+                    <div class="compare__bars">
+                        <div class="compare__bar"><span>Котёнок</span><span class="bar"><i data-w="20"></i></span></div>
+                        <div class="compare__bar"><span>Питбуль</span><span class="bar bar--dog"><i data-w="95"></i></span></div>
+                    </div>
+                </div>
+                <div class="compare__row">
+                    <span class="compare__name">Доброта</span>
+                    <div class="compare__bars">
+                        <div class="compare__bar"><span>Котёнок</span><span class="bar"><i data-w="85"></i></span></div>
+                        <div class="compare__bar"><span>Питбуль</span><span class="bar bar--dog"><i data-w="100"></i></span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <p class="quote reveal">Не важно, <em>кто ты</em> — важно, кто рядом.</p>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <svg class="kitten" id="kitten" viewBox="0 0 200 130" aria-hidden="true">
+            <path d="M18 130 C 14 70 40 40 100 40 C 160 40 186 70 182 130 Z" fill="#0c0c12" stroke="#4b4a68" stroke-width="2.5" stroke-linejoin="round"/>
+            <path d="M32 58 L 40 8 L 76 42 Z" fill="#0c0c12" stroke="#4b4a68" stroke-width="2.5" stroke-linejoin="round"/>
+            <path d="M168 58 L 160 8 L 124 42 Z" fill="#0c0c12" stroke="#4b4a68" stroke-width="2.5" stroke-linejoin="round"/>
+            <path d="M42 46 L 45 22 L 62 40 Z" fill="#c57a98"/>
+            <path d="M158 46 L 155 22 L 138 40 Z" fill="#c57a98"/>
+            <circle cx="68" cy="82" r="24" fill="#fff"/>
+            <circle cx="132" cy="82" r="24" fill="#fff"/>
+            <circle class="kitten__pupil" cx="68" cy="82" r="16" fill="#000"/>
+            <circle class="kitten__pupil" cx="132" cy="82" r="16" fill="#000"/>
+        </svg>
+        <div class="footer__grid">
+            <p class="footer__big">Дружба — это<br><span>когда рядом.</span></p>
+            <ul class="footer__links">
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="about.html">О мультфильме</a></li>
+                <li><a href="review.html">Мой отзыв</a></li>
+                <li><a href="gallery.html">Кадры</a></li>
+            </ul>
+        </div>
+        <p class="footer__copy">Сайт-отзыв на Kitbull · учебный проект</p>
+        <p class="footer__hint">Нажми в любом месте — появятся лапки 🐾</p>
+    </footer>
+
+    <script src="./script.js"></script>
+</body>
+</html>

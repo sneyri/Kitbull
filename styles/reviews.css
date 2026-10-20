@@ -1,0 +1,91 @@
+/* ---------- Мой отзыв ---------- */
+.mine {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 36px;
+    padding: 36px;
+    border: 1px solid rgba(240, 169, 62, 0.35);
+    border-radius: 30px;
+    background:
+        radial-gradient(ellipse at 0% 0%, rgba(240, 169, 62, 0.12), transparent 55%),
+        var(--card);
+}
+
+.mine__big {
+    display: block;
+    color: var(--amber);
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: clamp(64px, 9vw, 120px);
+    line-height: 1;
+}
+
+.mine__big small { font-size: 0.32em; color: var(--muted); }
+
+.stars { margin: 10px 0 24px; color: var(--amber); font-size: 32px; letter-spacing: 4px; }
+
+.stars span {
+    display: inline-block;
+    opacity: 0;
+    transform: scale(0.2) rotate(-90deg);
+    transition: opacity 400ms, transform 500ms cubic-bezier(0.3, 1.8, 0.5, 1);
+}
+
+.stars.is-on span { opacity: 1; transform: none; }
+
+.meters { display: grid; gap: 14px; margin-bottom: 26px; }
+
+.meter { display: grid; grid-template-columns: 110px 1fr 44px; align-items: center; gap: 14px; font-size: 15px; }
+.meter__val { color: var(--muted); font-size: 13px; text-align: right; }
+
+.mine__quote {
+    margin-bottom: 24px;
+    padding-left: 18px;
+    border-left: 3px solid var(--pink);
+    font-size: 19px;
+    font-style: italic;
+    color: #f4d9e3;
+}
+
+/* Кнопка «Мне тоже понравилось» */
+.like {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    min-height: 52px;
+    padding: 0 28px;
+    border: 1px solid var(--pink);
+    border-radius: 999px;
+    background: transparent;
+    font-weight: 700;
+    transition: background 200ms, transform 150ms, color 200ms;
+}
+
+.like:hover { background: rgba(229, 143, 176, 0.16); }
+.like:active { transform: scale(0.94); }
+.like[aria-pressed="true"] { background: var(--pink); color: #2a1020; }
+.like__heart { display: inline-block; font-size: 20px; }
+.like.pop .like__heart { animation: pop 500ms; }
+.like__count { font-family: var(--font-display); }
+
+@keyframes pop { 40% { transform: scale(1.9); } }
+
+/* Что понравилось */
+.liked { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 18px; }
+
+.liked__item {
+    padding: 26px;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background: var(--card);
+    transition: transform 250ms, border-color 250ms;
+}
+
+.liked__item:hover { transform: translateY(-6px); border-color: rgba(240, 169, 62, 0.5); }
+.liked__item h3 { margin-bottom: 10px; font-size: 19px; color: var(--amber); }
+.liked__item p { color: var(--muted); font-size: 16px; }
+
+@media (max-width: 820px) {
+    .mine { grid-template-columns: 1fr; padding: 24px; }
+    .meter { grid-template-columns: 90px 1fr 40px; }
+}

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="О мультфильме Kitbull: сюжет, создатели и интересные факты.">
+    <title>О мультфильме — Kitbull</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&family=Unbounded:wght@600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/root.css">
+</head>
+<body data-page="about">
+    <canvas id="particles" aria-hidden="true"></canvas>
+    <div class="progress" id="progress"></div>
+
+    <nav class="nav" id="nav">
+        <a class="nav__logo" href="index.html">Kit<span>bull</span></a>
+        <ul class="nav__list" id="navList">
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="about.html" class="is-active" aria-current="page">О мультфильме</a></li>
+            <li><a href="characters.html">Герои</a></li>
+            <li><a href="review.html">Мой отзыв</a></li>
+            <li><a href="gallery.html">Кадры</a></li>
+        </ul>
+        <button class="nav__burger" id="burger" aria-label="Меню" aria-expanded="false" aria-controls="navList"><span></span><span></span></button>
+    </nav>
+
+    <header class="hero hero--small">
+        <div class="hero__text">
+            <span class="hero__tag">01 · О мультфильме</span>
+            <h1 class="hero__title">Котёнок, питбуль и <em>одна цепь</em></h1>
+            <p class="hero__lead">Восемь с небольшим минут без слов, после которых хочется кого-нибудь обнять.</p>
+        </div>
+        <div class="hero__sphere"><canvas id="sphere" data-glyph="fish" aria-hidden="true"></canvas></div>
+    </header>
+
+    <main class="sheet">
+        <section class="section main" id="story">
+            <span class="section__label reveal">Сюжет</span>
+            <h2 class="section__title reveal">О чём этот мультфильм</h2>
+            <div class="story">
+                <div class="story__text reveal">
+                    <p class="main__par">
+                        На вопрос «Что такое дружба?» очень хорошо отвечает короткометражный мультфильм
+                        <strong>Kitbull</strong>. Это история о бездомном чёрном котёнке и питбуле, который живёт
+                        на цепи у злого хозяина. Они совсем не похожи друг на друга и поначалу боятся друг друга,
+                        но постепенно находят общий язык.
+                    </p>
+                    <div class="main__more" id="more" hidden>
+                        <p class="main__par">
+                            Мне очень понравилось, потому что это <strong>душевный и тёплый</strong> мультфильм.
+                            В нём почти нет слов, и всё понятно по взглядам, звукам и движениям героев.
+                            Особенно запоминается рисованная двухмерная анимация котёнка на фоне
+                            объёмного, «настоящего» двора.
+                        </p>
+                        <p class="main__par">
+                            Эта история про то, что поддержку можно найти там, где совсем не ждёшь,
+                            и что дружба не зависит от того, кто ты и как выглядишь.
+                        </p>
+                    </div>
+                    <button class="btn btn--primary" id="moreBtn" aria-expanded="false" aria-controls="more">Читать дальше</button>
+                </div>
+
+                <ul class="facts reveal">
+                    <li class="facts__item"><span class="facts__num" data-count="2019">0</span><span class="facts__label">год выхода</span></li>
+                    <li class="facts__item"><span class="facts__num"><span data-count="9">0</span> мин</span><span class="facts__label">примерная длительность</span></li>
+                    <li class="facts__item"><span class="facts__text">Pixar</span><span class="facts__label">проект SparkShorts</span></li>
+                    <li class="facts__item"><span class="facts__text">Оскар</span><span class="facts__label">номинация за лучший анимационный короткометражный фильм</span></li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section">
+            <span class="section__label reveal">Ход истории</span>
+            <h2 class="section__title reveal">Как рождается дружба</h2>
+            <div class="timeline">
+                <div class="timeline__step reveal"><h3>Встреча</h3><p>Котёнок, который привык рассчитывать только на себя, замечает во дворе огромную собаку на цепи.</p></div>
+                <div class="timeline__step reveal"><h3>Недоверие</h3><p>Оба не знают, чего ждать друг от друга: один боится, другой давно разучился доверять.</p></div>
+                <div class="timeline__step reveal"><h3>Игра</h3><p>Из любопытства и маленьких странностей вырастает первая настоящая забота.</p></div>
+                <div class="timeline__step reveal"><h3>Выбор</h3><p>Дружба требует смелости — и именно этот момент делает финал таким тёплым.</p></div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="split">
+                <div class="split__img reveal"><img src="./images/scene-alley.png" alt="Котёнок играет с оранжевой крышкой на улице"></div>
+                <div class="reveal">
+                    <span class="section__label">Особенность</span>
+                    <h2 class="section__title">2D-котёнок в 3D-мире</h2>
+                    <p class="muted">Название — игра слов: kitten (котёнок) и pit bull (питбуль). Котёнок нарисован вручную, как в классической двухмерной анимации, а двор вокруг него объёмный. Из-за этого герой кажется живым и немного «не отсюда» — совсем как бездомный зверёк.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <span class="section__label reveal">Создатели</span>
+            <div class="credits">
+                <div class="credits__item reveal"><span class="credits__role">Студия</span><span class="credits__name">Pixar Animation Studios</span></div>
+                <div class="credits__item reveal"><span class="credits__role">Проект</span><span class="credits__name">SparkShorts</span></div>
+                <div class="credits__item reveal"><span class="credits__role">Режиссёр</span><span class="credits__name">Росана Салливан</span></div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <svg class="kitten" id="kitten" viewBox="0 0 200 130" aria-hidden="true">
+            <path d="M18 130 C 14 70 40 40 100 40 C 160 40 186 70 182 130 Z" fill="#0c0c12" stroke="#4b4a68" stroke-width="2.5" stroke-linejoin="round"/>
+            <path d="M32 58 L 40 8 L 76 42 Z" fill="#0c0c12" stroke="#4b4a68" stroke-width="2.5" stroke-linejoin="round"/>
+            <path d="M168 58 L 160 8 L 124 42 Z" fill="#0c0c12" stroke="#4b4a68" stroke-width="2.5" stroke-linejoin="round"/>
+            <path d="M42 46 L 45 22 L 62 40 Z" fill="#c57a98"/>
+            <path d="M158 46 L 155 22 L 138 40 Z" fill="#c57a98"/>
+            <circle cx="68" cy="82" r="24" fill="#fff"/>
+            <circle cx="132" cy="82" r="24" fill="#fff"/>
+            <circle class="kitten__pupil" cx="68" cy="82" r="16" fill="#000"/>
+            <circle class="kitten__pupil" cx="132" cy="82" r="16" fill="#000"/>
+        </svg>
+        <div class="footer__grid">
+            <p class="footer__big">Дружба — это<br><span>когда рядом.</span></p>
+            <ul class="footer__links">
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="characters.html">Герои</a></li>
+                <li><a href="review.html">Мой отзыв</a></li>
+                <li><a href="gallery.html">Кадры</a></li>
+            </ul>
+        </div>
+        <p class="footer__copy">Сайт-отзыв на Kitbull · учебный проект</p>
+        <p class="footer__hint">Нажми в любом месте — появятся лапки 🐾</p>
+    </footer>
+
+    <script src="./script.js"></script>
+</body>
+</html>

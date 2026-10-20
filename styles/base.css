@@ -1,0 +1,123 @@
+:root {
+    --bg: #0a090d;
+    --sheet: #121116;
+    --card: #1a181f;
+    --card-hover: #211e29;
+    --line: rgba(255, 255, 255, 0.09);
+    --text: #eeeae3;
+    --muted: #9a95a3;
+    --amber: #f0a93e;
+    --orange: #f2813a;
+    --pink: #e58fb0;
+    --purple: #7a5aa6;
+    --radius: 22px;
+    --gutter: clamp(18px, 6vw, 96px);
+    --font-display: "Unbounded", "Rubik", Arial, sans-serif;
+    --font-body: "Manrope", Arial, Helvetica, sans-serif;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+    background: var(--bg);
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--bg);
+    color: var(--text);
+    font-size: 17px;
+    line-height: 1.65;
+    overflow-x: hidden;
+    animation: pageIn 600ms ease-out both;
+}
+
+/* Лёгкое зерно, чтобы фон не был «плоским» */
+body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: 90;
+    pointer-events: none;
+    opacity: 0.07;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+}
+
+ul { list-style: none; }
+a { color: inherit; text-decoration: none; }
+img { display: block; max-width: 100%; }
+button { font: inherit; color: inherit; cursor: pointer; }
+
+h1, h2, h3 {
+    font-family: var(--font-display);
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+}
+
+.section {
+    position: relative;
+    z-index: 1;
+    padding: 90px var(--gutter) 10px;
+}
+
+.section__label {
+    display: block;
+    margin-bottom: 14px;
+    color: var(--amber);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+}
+
+.section__title {
+    max-width: 18ch;
+    margin-bottom: 40px;
+    font-size: clamp(28px, 4.4vw, 52px);
+}
+
+.muted { color: var(--muted); }
+
+/* Кнопки */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    min-height: 52px;
+    padding: 0 30px;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    background: transparent;
+    font-weight: 700;
+    font-size: 16px;
+    transition: transform 200ms, background 200ms, border-color 200ms, color 200ms;
+}
+
+.btn:hover { transform: translateY(-3px); border-color: var(--text); }
+.btn:active { transform: scale(0.95); transition-duration: 50ms; }
+
+.btn--primary {
+    background: var(--amber);
+    border-color: var(--amber);
+    color: #1a1208;
+}
+
+.btn--primary:hover { background: #ffc15e; border-color: #ffc15e; }
+
+:focus-visible {
+    outline: 3px solid var(--amber);
+    outline-offset: 3px;
+}
+
+@keyframes pageIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}

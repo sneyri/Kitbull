@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Мой отзыв на мультфильм Kitbull.">
+    <title>Мой отзыв — Kitbull</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&family=Unbounded:wght@600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/root.css">
+</head>
+<body data-page="reviews">
+    <canvas id="particles" aria-hidden="true"></canvas>
+    <div class="progress" id="progress"></div>
+
+    <nav class="nav" id="nav">
+        <a class="nav__logo" href="index.html">Kit<span>bull</span></a>
+        <ul class="nav__list" id="navList">
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="about.html">О мультфильме</a></li>
+            <li><a href="characters.html">Герои</a></li>
+            <li><a href="review.html" class="is-active" aria-current="page">Мой отзыв</a></li>
+            <li><a href="gallery.html">Кадры</a></li>
+        </ul>
+        <button class="nav__burger" id="burger" aria-label="Меню" aria-expanded="false" aria-controls="navList"><span></span><span></span></button>
+    </nav>
+
+    <header class="hero hero--small">
+        <div class="hero__text">
+            <span class="hero__tag">03 · Мой отзыв</span>
+            <h1 class="hero__title">Моё <em>мнение</em></h1>
+            <p class="hero__lead">Оценка, впечатления и то, за что мне понравился этот мультфильм.</p>
+        </div>
+        <div class="hero__sphere"><canvas id="sphere" data-glyph="heart" aria-hidden="true"></canvas></div>
+    </header>
+
+    <main class="sheet">
+        <section class="section" id="my-review">
+            <span class="section__label reveal">Мой отзыв</span>
+            <h2 class="section__title reveal">Очень душевно</h2>
+            <div class="mine reveal">
+                <div>
+                    <span class="mine__big"><span data-count="10">0</span><small>/10</small></span>
+                    <div class="stars" id="stars" aria-label="Оценка 10 из 10"></div>
+                    <p class="mine__quote">Очень душевный и приятный мультфильм. Рекомендую всем, кто хочет немного тепла.</p>
+                    <button class="like" data-like aria-pressed="false">
+                        <span class="like__heart">♥</span> Мне тоже понравилось <span class="like__count" data-like-count>0</span>
+                    </button>
+                </div>
+                <ul class="meters">
+                    <li class="meter"><span>Душевность</span><span class="bar"><i data-w="100"></i></span><span class="meter__val">100%</span></li>
+                    <li class="meter"><span>Анимация</span><span class="bar"><i data-w="95"></i></span><span class="meter__val">95%</span></li>
+                    <li class="meter"><span>Сюжет</span><span class="bar"><i data-w="90"></i></span><span class="meter__val">90%</span></li>
+                    <li class="meter"><span>Атмосфера</span><span class="bar"><i data-w="100"></i></span><span class="meter__val">100%</span></li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section">
+            <span class="section__label reveal">Что понравилось</span>
+            <h2 class="section__title reveal">За что я люблю Kitbull</h2>
+            <div class="liked">
+                <div class="liked__item reveal"><h3>Душевность</h3><p>Очень тёплый и приятный мультфильм: после него остаётся хорошее настроение.</p></div>
+                <div class="liked__item reveal"><h3>Без лишних слов</h3><p>Всё понятно по взглядам и движениям героев, слова здесь не нужны.</p></div>
+                <div class="liked__item reveal"><h3>Анимация</h3><p>Рисованный котёнок на фоне объёмного двора выглядит необычно и красиво.</p></div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <svg class="kitten" id="kitten" viewBox="0 0 200 130" aria-hidden="true">
+            <path d="M18 130 C 14 70 40 40 100 40 C 160 40 186 70 182 130 Z" fill="#0c0c12" stroke="#4b4a68" stroke-width="2.5" stroke-linejoin="round"/>
+            <path d="M32 58 L 40 8 L 76 42 Z" fill="#0c0c12" stroke="#4b4a68" stroke-width="2.5" stroke-linejoin="round"/>
+            <path d="M168 58 L 160 8 L 124 42 Z" fill="#0c0c12" stroke="#4b4a68" stroke-width="2.5" stroke-linejoin="round"/>
+            <path d="M42 46 L 45 22 L 62 40 Z" fill="#c57a98"/>
+            <path d="M158 46 L 155 22 L 138 40 Z" fill="#c57a98"/>
+            <circle cx="68" cy="82" r="24" fill="#fff"/>
+            <circle cx="132" cy="82" r="24" fill="#fff"/>
+            <circle class="kitten__pupil" cx="68" cy="82" r="16" fill="#000"/>
+            <circle class="kitten__pupil" cx="132" cy="82" r="16" fill="#000"/>
+        </svg>
+        <div class="footer__grid">
+            <p class="footer__big">Дружба — это<br><span>когда рядом.</span></p>
+            <ul class="footer__links">
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="about.html">О мультфильме</a></li>
+                <li><a href="characters.html">Герои</a></li>
+                <li><a href="gallery.html">Кадры</a></li>
+            </ul>
+        </div>
+        <p class="footer__copy">Сайт-отзыв на Kitbull · учебный проект</p>
+        <p class="footer__hint">Нажми в любом месте — появятся лапки 🐾</p>
+    </footer>
+
+    <script src="./script.js"></script>
+</body>
+</html>
